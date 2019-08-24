@@ -33,8 +33,7 @@ router.get("/manage", ensureAuthenticated, (req, res) => {
 // Forgot Password Page
 router.get("/forgotPassword", forwardAuthenticated, (req, res) => {
   res.render("forgotPasswordForm", {
-    layout: "forgotPasswordForm",
-    errors: errors2
+    layout: "forgotPasswordForm"
   });
 });
 
