@@ -1,0 +1,36 @@
+<%- include('partials/messages'); %>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Title</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/png" sizes="32x32" href="" />
+  <link rel="icon" type="image/png" sizes="96x96" href="" />
+  <meta name="theme-color" content="#FFFFFF" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="description" content="">
+  <meta name="robots" content="" />
+</head>
+
+<body>
+  <form method="post" action="/users/register">
+    <h1>Join</h1>
+    <input type="email" name="email" placeholder="Email" autocomplete="email" />
+    <input type="password" name="password" placeholder="Password" autocomplete="new-password" />
+    <input type="password" name="password2" placeholder="Verify Password" autocomplete="new-password" />
+    <button>Join</button>
+  </form>
+
+  <form method="post" action="/users/login">
+    <h1>Log In</h1>
+    <input type="email" name="email" placeholder="Email" id="loginfocus" autocomplete="email" />
+    <input type="password" name="password" placeholder="Password" autocomplete="current-password" />
+    <button>Log In</button>
+  </form>
+
+  <a href="/forgotPassword">Forgot password</a>
+</body>
+
+</html>

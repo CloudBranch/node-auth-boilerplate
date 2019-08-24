@@ -1,0 +1,40 @@
+<%- include partials/header -%>
+
+<%- include partials/sidenav.ejs -%>
+
+<main>
+
+  <h6>User Information</h6>
+
+  <form method="post" action="/users/info">
+    <label for="firstName">First Name</label>
+    <input type="text" value="<%= user.firstName %>" id="firstName" name="firstName" />
+    <label for="lastName">Last Name</label>
+    <input type="text" value="<%= user.lastName %>" id="lastName" name="lastName" />
+    <input type="hidden" value="<%= user.email %>" name="email" />
+    <button type="submit">
+      Update
+    </button>
+  </form>
+
+  <h6>Change Your Password</h6>
+
+  <form method="post" action="/users/reset">
+    <input type="hidden" value="<%= user.email %>" name="email" />
+    <button type="submit">
+      Change Password
+    </button>
+  </form>
+
+  <h6>Invite User</h6>
+  <form action="/users/invite" method="POST">
+    <label for="usersEmail">User's Email</label>
+    <input type="text" name="email" placeholder="User's Email" id="usersEmail" />
+    <button type="submit">
+      Send Invite
+    </button>
+  </form>
+
+  <a href="/users/logout">Logout</a>
+</main>
+<%- include('partials/footer'); %>
